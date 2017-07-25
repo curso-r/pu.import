@@ -1,0 +1,44 @@
+---
+title: "Arquivos de texto"
+author: "William"
+---
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  out.width = "60%", out.height = "60%",
+  fig.retina = 2
+)
+```
+
+# Importando arquivos de texto
+
+Para importar arquivos de texto para R, como `.txt` ou `.csv`, utilizaremos o pacote `readr`.
+
+Veja alguns exemplos:
+
+```{r}
+dados_txt <- readr::read_table2(file = "data/mtcars.txt")
+dados_csv <- readr::read_csv(file = "data/mtcars.csv")
+```
+
+<div class='admonition note'>
+<p class='admonition-title'>
+Exercício relâmpago!
+</p>
+<p>
+Descubra qual a diferença entre as funções "read_table()" e "read_table2()"; e as funções "read_csv()" e "read_csv2()".
+</p>
+</div>
+
+Também é possível salvar objetos, como data.frames em um tipo especial de arquivos, o `.rds`. A vantagem dessa extensão é guardar a estrutura dos dados salvos, como a classe das colunas de um data.frame. Além disso, é uma boa alternativa para lidar com grandes bancos de dados, já que arquivos `.rds` serão bem mais compactos do que arquivos Excel.
+
+```{r}
+write_rds(mtcars, path = "data/mtcars.rds")
+dados <- read_rds(path = "data/mtcars.rds")
+```
+
+
+
+
+

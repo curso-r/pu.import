@@ -1,0 +1,29 @@
+---
+title: "Arquivos de texto"
+author: "William"
+---
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE, 
+  out.width = "60%", out.height = "60%",
+  fig.retina = 2
+)
+```
+
+# Importando arquivos do Excel
+
+O pacote `readxl` contém funções para ler dados de arquivos do Excel, como `.xls` e `xlsx`.
+
+```{r}
+readxl::read_xls(path = "data/mtcars.xls")
+readxl::read_xlsx(path = "data/mtcars.xlsx")
+```
+
+A funçao `read_excel()` auto detecta a extensão do arquivo.
+
+```{r}
+read_excel(path = "data/mtcars.xls")
+read_excel(path = "data/mtcars.xlsx")
+```
+
