@@ -15,7 +15,7 @@ As funções que apresentaremos aqui carregam os dados em `tibbles`, que diferem
 
 - permite a utilização de *list-columns*.
 
-Se você não estiver familiarizado com o conceito de *list-columns*, não se preocupe. Trataremos melhor do assunto no tópico [Funcionais: o pacote purrr]().
+Se você não estiver familiarizado com o conceito de *list-columns*, não se preocupe. Trataremos melhor do assunto no tópico sobre funcionais.
 
 
 
