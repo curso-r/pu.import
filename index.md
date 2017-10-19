@@ -1,6 +1,6 @@
 ---
 title: 'Importação de dados'
-date: '2017-10-11'
+date: '2017-10-19'
 ---
 
 
@@ -34,6 +34,9 @@ Veja alguns exemplos:
 
 
 ```r
+library(readr)
+## Error in library(readr): there is no package called 'readr'
+
 dados_txt <- readr::read_table2(file = "data/mtcars.txt")
 ## Error in loadNamespace(name): there is no package called 'readr'
 dados_csv <- readr::read_csv(file = "data/mtcars.csv")
