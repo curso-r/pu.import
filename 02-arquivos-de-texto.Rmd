@@ -18,6 +18,8 @@ Para importar arquivos de texto para R, como `.txt` ou `.csv`, utilizaremos o pa
 Veja alguns exemplos:
 
 ```{r}
+library(readr)
+
 dados_txt <- readr::read_table2(file = "data/mtcars.txt")
 dados_csv <- readr::read_csv(file = "data/mtcars.csv")
 ```
