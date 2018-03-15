@@ -1,13 +1,15 @@
 ---
 title: 'Importação de dados'
-date: '2017-10-19'
+date: '2018-03-15'
 ---
 
 
 
 
 
-Nesta seção, vamos introduzir os principais pacotes para importar dados para o R. Mostraremos como importar dados de arquivos de texto, de planilhas do excel, de extensões de outros programas estatísticos (SAS e SPSS, por exemplo), e como interagir com o SQL.
+Nesta seção, vamos introduzir os principais pacotes para importar dados para o R. Mostraremos como importar dados de arquivos de texto e de planilhas do excel.
+
+<!-- , de extensões de outros programas estatísticos (SAS e SPSS, por exemplo), e como interagir com o SQL. -->
 
 As funções que apresentaremos aqui carregam os dados em `tibbles`, que diferem dos data.frames em dois pontos importantes:
 
@@ -35,12 +37,11 @@ Veja alguns exemplos:
 
 ```r
 library(readr)
-## Error in library(readr): there is no package called 'readr'
 
 dados_txt <- readr::read_table2(file = "data/mtcars.txt")
-## Error in loadNamespace(name): there is no package called 'readr'
+## Error: 'data/mtcars.txt' does not exist in current working directory ('/home/travis/build/curso-r/pu.import').
 dados_csv <- readr::read_csv(file = "data/mtcars.csv")
-## Error in loadNamespace(name): there is no package called 'readr'
+## Error: 'data/mtcars.csv' does not exist in current working directory ('/home/travis/build/curso-r/pu.import').
 ```
 
 <div class='admonition note'>
@@ -57,9 +58,7 @@ Também é possível salvar objetos, como data.frames em um tipo especial de arq
 
 ```r
 write_rds(mtcars, path = "data/mtcars.rds")
-## Error in write_rds(mtcars, path = "data/mtcars.rds"): could not find function "write_rds"
 dados <- read_rds(path = "data/mtcars.rds")
-## Error in read_rds(path = "data/mtcars.rds"): could not find function "read_rds"
 ```
 
 
@@ -78,9 +77,9 @@ O pacote `readxl` contém funções para ler dados de arquivos do Excel, como `.
 
 ```r
 readxl::read_xls(path = "data/mtcars.xls")
-## Error in loadNamespace(name): there is no package called 'readxl'
+## Error in read_fun(path = path, sheet = sheet, limits = limits, shim = shim, : Evaluation error: path[1]="data/mtcars.xls": No such file or directory.
 readxl::read_xlsx(path = "data/mtcars.xlsx")
-## Error in loadNamespace(name): there is no package called 'readxl'
+## Error in read_fun(path = path, sheet = sheet, limits = limits, shim = shim, : Evaluation error: zip file 'data/mtcars.xlsx' cannot be opened.
 ```
 
 A funçao `read_excel()` auto detecta a extensão do arquivo.
