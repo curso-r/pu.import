@@ -17,5 +17,7 @@ Remotes:
     curso-r/puBuild
 Imports:
   puBuild,
-  tutorial
+  tutorial,
+  readr,
+  readxl
 RoxygenNote: 6.0.1

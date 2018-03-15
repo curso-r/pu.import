@@ -11,7 +11,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-Nesta seção, vamos introduzir os principais pacotes para importar dados para o R. Mostraremos como importar dados de arquivos de texto, de planilhas do excel, de extensões de outros programas estatísticos (SAS e SPSS, por exemplo), e como interagir com o SQL.
+Nesta seção, vamos introduzir os principais pacotes para importar dados para o R. Mostraremos como importar dados de arquivos de texto e de planilhas do excel.
+
+<!-- , de extensões de outros programas estatísticos (SAS e SPSS, por exemplo), e como interagir com o SQL. -->
 
 As funções que apresentaremos aqui carregam os dados em `tibbles`, que diferem dos data.frames em dois pontos importantes:
 
